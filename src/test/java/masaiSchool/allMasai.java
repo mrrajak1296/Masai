@@ -69,21 +69,23 @@ public class allMasai {
         Select drop = new Select(sdte);
         drop.selectByVisibleText("SDET");
 		
+        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement Experience = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//body//svelte//select[2]")));
+        Experience.click();
+        Select drop1 = new Select(Experience);
+        drop1.selectByValue("Entry Level (0-2 years)");
 		
-        WebElement Experience  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body//svelte//select[2]"))) ;
-		Experience.click();
-		Select drop1 = new Select(Experience);
-		drop1.deselectByValue("Entry Level (0-2 years)");
-		
-		WebElement Hiring = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body//svelte//select[3]"))) ;
-		Hiring.click();
-		Select drop2 = new Select(Hiring);
-		drop1.deselectByValue("1 month");
-		
-		WebElement Location = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body//svelte//select[4]")));
-		Location.click();
-		Select drop3 = new Select(Location);
-		drop1.deselectByValue("Delhi NCR");
+        WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement Hiring = wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//body//svelte//select[3]")));
+        Hiring.click();
+        Select drop2 = new Select(Hiring);
+        drop2.selectByValue("1 month"); 
+
+        WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement Location = wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//body//svelte//select[4]")));
+        Location.click();
+        Select drop3 = new Select(Location);
+        drop3.selectByValue("Delhi NCR");
 		
 	}
 	
