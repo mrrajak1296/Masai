@@ -88,6 +88,10 @@ public class allMasai {
         drop3.selectByValue("Delhi NCR");
 		
 	}
+	@AfterClass
+	public void teardown() {
+		driver.quit();
+	}
 	
 
 }
